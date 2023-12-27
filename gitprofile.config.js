@@ -2,113 +2,158 @@
 
 const config = {
   github: {
-    username: 'arifszn', // Your GitHub org/user name. (Required)
+    username: 'qainsights', // Your GitHub org/user name. (Required)
     sortBy: 'stars', // stars | updated
-    limit: 10, // How many projects to display.
+    limit: 6, // How many projects to display.
     exclude: {
       forks: false, // Forked projects will not be displayed if set to true.
       projects: [], // These projects will not be displayed. example: ['my-project1', 'my-project2']
     },
   },
   social: {
-    linkedin: 'ariful-alam',
-    twitter: 'arif_szn',
-    mastodon: 'arifszn@mastodon.social',
+    linkedin: 'naveenkumarn',
+    twitter: 'qainsights',
+    //mastodon: 'arifszn@mastodon.social',
     facebook: '',
     instagram: '',
-    youtube: '', // example: 'pewdiepie'
+    youtube: 'qainsights', // example: 'pewdiepie'
     dribbble: '',
     behance: '',
-    medium: 'arifszn',
-    dev: 'arifszn',
+    //medium: 'arifszn',
+    dev: 'qainsights',
     stackoverflow: '', // example: '1/jeff-atwood'
     skype: '',
     telegram: '',
-    website: 'https://arifszn.com',
+    website: 'https://qainsights.com',
     phone: '',
-    email: 'arifulalamszn@gmail.com',
+    email: 'naveenkumar@qain.si',
   },
   resume: {
-    fileUrl:
-      'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf', // Empty fileUrl will hide the `Download Resume` button.
+    fileUrl: 'https://app.rezi.ai/s/25E51vcqnwTJb4pPvAKR', // Empty fileUrl will hide the `Download Resume` button.
   },
   skills: [
-    'PHP',
-    'Laravel',
-    'JavaScript',
-    'React.js',
-    'Node.js',
-    'Nest.js',
-    'MySQL',
-    'PostgreSQL',
+    'Python',
+    'Bash',
+    'Linux',
     'Git',
+    'Observability',
+    'Chaos Engineering',
     'Docker',
-    'PHPUnit',
-    'CSS',
-    'Antd',
-    'Tailwind',
+    'JMeter',
+    'LoadRunner',
+    'k6',
+    'Locust',
   ],
   experiences: [
     {
-      company: 'Company Name',
-      position: 'Position',
-      from: 'September 2021',
+      company: 'Salesforce',
+      position: 'Performance Engineer',
+      from: 'October 2021',
       to: 'Present',
-      companyLink: 'https://example.com',
+      companyLink: 'https://salesforce.com',
     },
     {
-      company: 'Company Name',
-      position: 'Position',
+      company: 'Ascendum Solutions',
+      position: 'Performance Engineer',
       from: 'July 2019',
-      to: 'August 2021',
-      companyLink: 'https://example.com',
+      to: 'October 2021',
+      companyLink: 'https://ascendum.com',
+    },
+    {
+      company: 'Kaplan',
+      position: 'Performance Engineer',
+      from: 'Apr 2019',
+      to: 'Jul 2019',
+      companyLink: 'https://kaplan.com',
+    },
+    {
+      company: 'Infosys',
+      position: 'Performance Engineer',
+      from: 'September 2006',
+      to: 'April 2019',
+      companyLink: 'https://infosys.com',
     },
   ],
-  /* certifications: [
+   certifications: [
     {
-      name: 'Lorem ipsum',
-      body: 'Lorem ipsum dolor sit amet',
-      year: 'March 2022',
-      link: 'https://example.com'
+      name: 'Certified Ethical Hacker (CEH)',
+      body: '',
+      year: 'March 2023',
+      link: '',
     },
-  ], */
+    {
+      name: 'Certified Kubernetes Application Developer (CKAD)',
+      body: '',
+      year: 'Jul 2023',
+      link: 'https://qain.si/ckad',
+    },
+    {
+      name: 'AWS Solution Architect Associate',
+      body: '',
+      year: 'October 2020',
+      link: '',
+    },
+  ],
   education: [
     {
-      institution: 'Institution Name',
-      degree: 'Degree',
-      from: '2015',
-      to: '2019',
+      institution: 'Western Governors University',
+      degree: 'Masters in Cybersecurity and Quality Assurance',
+      from: '2022',
+      to: '2023',
     },
     {
-      institution: 'Institution Name',
-      degree: 'Degree',
-      from: '2012',
-      to: '2014',
+      institution: 'Bharathiyar University',
+      degree: 'Masters in Political Science and Public Administration',
+      from: '2008',
+      to: '2010',
+    },
+    {
+      institution: 'PSG College of Technology',
+      degree: 'Bachelors in Applied Science',
+      from: '2006',
+      to: '2003',
+    },
+    {
+      institution: 'Devanga High School',
+      degree: 'High School',
+      from: '2003',
+      to: '1991',
     },
   ],
 
   // To hide the `My Projects` section, keep it empty.
   externalProjects: [
     {
-      title: 'Project Name',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
-      imageUrl: 'https://via.placeholder.com/250x250',
-      link: 'https://example.com',
+      title: 'PerfGPT',
+      description: 'AI tools designed for performance testing and engineering.',
+      imageUrl: 'https://www.perfgpt.ai/img/perfGPT-logo.svg',
+      link: 'https://www.perfgpt.ai/',
     },
     {
-      title: 'Project Name',
+      title: 'Kel',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
-      imageUrl: 'https://via.placeholder.com/250x250',
-      link: 'https://example.com',
+        'AI assistant for the CLI. Supports OpenAI, Anthropic, Ollama, Google, and more.',
+      imageUrl: 'https://kel.qainsights.com/img/logo.svg',
+      link: 'https://kel.qainsights.com',
+    },
+    {
+      title: 'Hamster',
+      description: 'Powerful JMeter launcher for Mac and Windows',
+      imageUrl: 'https://hamster.qainsights.com/img/hamster.png',
+      link: 'https://hamster.qainsights.com',
+    },
+    {
+      title: 'JMeter Docker Extension',
+      description: 'Execute JMeter tests in Docker Desktop',
+      imageUrl: 'https://desktop.docker.com/extensions/qainsights_jmeter-docker-extension/raw_githubusercontent_com/QAInsights/jmeter-docker-extension/main/feather.svg',
+      link: 'https://hub.docker.com/extensions/qainsights/jmeter-docker-extension',
     },
   ],
   // Display blog posts from your medium or dev account. (Optional)
   blog: {
     source: 'dev', // medium | dev
-    username: 'arifszn', // to hide blog section, keep it empty
-    limit: 2, // How many posts to display. Max is 10.
+    username: 'qainsights', // to hide blog section, keep it empty
+    limit: 4, // How many posts to display. Max is 10.
   },
   googleAnalytics: {
     id: '', // GA3 tracking id/GA4 tag id UA-XXXXXXXXX-X | G-XXXXXXXXXX
@@ -119,7 +164,7 @@ const config = {
     snippetVersion: 6,
   },
   themeConfig: {
-    defaultTheme: 'wireframe',
+    defaultTheme: 'dracula',
 
     // Hides the switch in the navbar
     // Useful if you want to support a single color mode
@@ -136,34 +181,34 @@ const config = {
     themes: [
       'light',
       'dark',
-      'cupcake',
-      'bumblebee',
-      'emerald',
+      // 'cupcake',
+      // 'bumblebee',
+      // 'emerald',
       'corporate',
       'synthwave',
-      'retro',
-      'cyberpunk',
-      'valentine',
-      'halloween',
-      'garden',
-      'forest',
-      'aqua',
-      'lofi',
-      'pastel',
-      'fantasy',
-      'wireframe',
-      'black',
-      'luxury',
+      // 'retro',
+      // 'cyberpunk',
+      // 'valentine',
+      // 'halloween',
+      // 'garden',
+      // 'forest',
+      // 'aqua',
+      // 'lofi',
+      // 'pastel',
+      // 'fantasy',
+      // 'wireframe',
+      // 'black',
+      // 'luxury',
       'dracula',
-      'cmyk',
-      'autumn',
-      'business',
-      'acid',
+      // 'cmyk',
+      // 'autumn',
+      // 'business',
+      // 'acid',
       'lemonade',
-      'night',
-      'coffee',
-      'winter',
-      'procyon',
+      // 'night',
+      // 'coffee',
+      // 'winter',
+      // 'procyon',
     ],
 
     // Custom theme
@@ -179,11 +224,12 @@ const config = {
   },
 
   // Optional Footer. Supports plain text or HTML.
-  footer: `Made with <a 
-      class="text-primary" href="https://github.com/arifszn/gitprofile"
-      target="_blank"
-      rel="noreferrer"
-    >GitProfile</a> and ❤️`,
+  footer: `©️ NaveenKumar Namachivayam - <a 
+  class="text-primary"
+  href="https://qainsights.com"
+  target="_blank"
+  rel="noreferrer">
+  QAInsights.com</a>`,
 };
 
 export default config;
