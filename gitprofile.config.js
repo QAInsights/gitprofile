@@ -111,14 +111,14 @@ const config = {
     {
       institution: 'PSG College of Technology',
       degree: 'Bachelors in Applied Science',
-      from: '2006',
-      to: '2003',
+      from: '2003',
+      to: '2006',
     },
     {
       institution: 'Devanga High School',
       degree: 'High School',
-      from: '2003',
-      to: '1991',
+      from: '1991',
+      to: '2003',
     },
   ],
 
