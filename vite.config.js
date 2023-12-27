@@ -21,9 +21,9 @@ export default defineConfig({
       },
       includeAssets: ['logo.png'],
       manifest: {
-        name: 'Portfolio',
-        short_name: 'Portfolio',
-        description: 'Personal Portfolio',
+        name: 'NaveenKumar Namachivayam',
+        short_name: 'naveenkumar',
+        description: 'NaveenKumar Namachivayam - QAInsights.com',
         icons: [
           {
             src: 'logo.png',
