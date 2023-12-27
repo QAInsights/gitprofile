@@ -118,6 +118,10 @@ export interface Social {
    * Email
    */
   email?: string;
+  /**
+   * Contact
+   */
+  contact?: string;
 }
 
 export interface Blog {

@@ -25,6 +25,7 @@ const config = {
     skype: '',
     telegram: '',
     website: 'https://qainsights.com',
+    contact: 'https://book.qainsights.com',
     phone: '',
     email: 'naveenkumar@qain.si',
   },
@@ -145,7 +146,8 @@ const config = {
     {
       title: 'JMeter Docker Extension',
       description: 'Execute JMeter tests in Docker Desktop',
-      imageUrl: 'https://desktop.docker.com/extensions/qainsights_jmeter-docker-extension/raw_githubusercontent_com/QAInsights/jmeter-docker-extension/main/feather.svg',
+      imageUrl:
+        'https://desktop.docker.com/extensions/qainsights_jmeter-docker-extension/raw_githubusercontent_com/QAInsights/jmeter-docker-extension/main/feather.svg',
       link: 'https://hub.docker.com/extensions/qainsights/jmeter-docker-extension',
     },
   ],
@@ -168,7 +170,7 @@ const config = {
 
     // Hides the switch in the navbar
     // Useful if you want to support a single color mode
-    disableSwitch: false,
+    disableSwitch: true,
 
     // Should use the prefers-color-scheme media-query,
     // using user system preferences, instead of the hardcoded defaultTheme

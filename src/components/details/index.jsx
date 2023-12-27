@@ -21,6 +21,7 @@ import {
   FaLinkedin,
   FaYoutube,
 } from 'react-icons/fa';
+import { SiGooglemeet } from 'react-icons/si';
 import PropTypes from 'prop-types';
 import { skeleton } from '../../helpers/utils';
 
@@ -212,6 +213,14 @@ const Details = ({ profile, loading, social, github }) => {
                   title="Website:"
                   value={social.website}
                   link={social.website}
+                />
+              )}
+              {social?.contact && (
+                <ListItem
+                  icon={<SiGooglemeet />}
+                  title="Contact:"
+                  value={social.contact}
+                  link={social.contact}
                 />
               )}
               {social?.skype && (
