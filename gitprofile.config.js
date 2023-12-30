@@ -153,7 +153,7 @@ const config = {
   ],
   // Display blog posts from your medium or dev account. (Optional)
   blog: {
-    source: 'dev', // medium | dev
+    source: 'wordpress', // medium | dev
     username: 'qainsights', // to hide blog section, keep it empty
     limit: 4, // How many posts to display. Max is 10.
   },
@@ -166,7 +166,7 @@ const config = {
     snippetVersion: 6,
   },
   themeConfig: {
-    defaultTheme: 'dracula',
+    defaultTheme: 'procyon',
 
     // Hides the switch in the navbar
     // Useful if you want to support a single color mode
@@ -215,11 +215,11 @@ const config = {
 
     // Custom theme
     customTheme: {
-      primary: '#fc055b',
-      secondary: '#219aaf',
-      accent: '#e8d03a',
+      primary: '#fbb03b',
+      secondary: '#272935',
+      accent: '#13141b',
       neutral: '#2A2730',
-      'base-100': '#E3E3ED',
+      'base-100': '#14151c',
       '--rounded-box': '3rem',
       '--rounded-btn': '3rem',
     },

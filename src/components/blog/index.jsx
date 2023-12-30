@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import { AiOutlineContainer } from 'react-icons/ai';
 import { getDevPost, getMediumPost } from '@arifszn/blog-js';
 import { formatDistance } from 'date-fns';
+import axios from 'axios';
 
 const displaySection = (blog) => {
   if (blog?.source && blog?.username) {
@@ -12,6 +13,46 @@ const displaySection = (blog) => {
   } else {
     return false;
   }
+};
+const removeHTMLTags = (str) => {
+  return str.replace(/<[^>]*>/g, '');
+};
+
+const textEllipsis = (str, length = 100, ending = '...') => {
+  if (str.length > length) {
+    return str.substring(0, length - ending.length) + ending;
+  } else {
+    return str;
+  }
+};
+
+const WPMediumPost = (post) => {
+  // console.log(post.title.trim());
+  // console.log(post.description.trim());
+  // console.log(post.thumbnail);
+  // console.log(post.link);
+  // console.log(post.categories);
+  // console.log(new Date(post.pubDate));
+
+  return {
+    title: post.title.trim(),
+    description: textEllipsis(removeHTMLTags(post.description.trim())),
+    thumbnail:
+      'https://qainsights.com/wp-content/uploads/2021/10/square_logo_Q_blue.png',
+    link: post.link,
+    categories: post.categories,
+    publishedAt: new Date(post.pubDate),
+  };
+};
+
+// define a function to get the articles from the wordpress feed
+const getWordPress = async ({ wpUrl }) => {
+  let response = await axios.get(wpUrl);
+  console.log(wpUrl);
+  console.log(response.data.items.map((item) => WPMediumPost(item)));
+  return response.data.items.map((item) => WPMediumPost(item));
+
+ 
 };
 
 const Blog = ({ loading, blog, googleAnalytics }) => {
@@ -29,8 +70,18 @@ const Blog = ({ loading, blog, googleAnalytics }) => {
         getDevPost({
           user: blog.username,
         }).then((res) => {
+          console.log(res);
           setArticles(res);
         });
+      } else if (blog.source === 'wordpress') {
+        setArticles(
+          getWordPress({
+            wpUrl:
+              'https://api.rss2json.com/v1/api.json?rss_url=https://qainsights.com/feed',
+          }).then((res) => {
+            setArticles(res);
+          })
+        );
       }
     }
   }, []);
@@ -194,7 +245,7 @@ const Blog = ({ loading, blog, googleAnalytics }) => {
                         skeleton({ width: 'w-28', height: 'h-8' })
                       ) : (
                         <span className="text-base-content opacity-70">
-                          Recent Posts
+                          📝 Recent Posts
                         </span>
                       )}
                     </h5>
