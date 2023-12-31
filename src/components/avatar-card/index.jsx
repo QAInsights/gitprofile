@@ -55,22 +55,33 @@ const AvatarCard = ({ profile, loading, avatarRing, resume }) => {
               : profile.bio}
           </div>
         </div>
-        {resume?.fileUrl &&
-          (loading ? (
-            <div className="mt-6">
-              {skeleton({ width: 'w-40', height: 'h-8' })}
-            </div>
-          ) : (
-            <a
-              href={resume.fileUrl}
-              target="_blank"
-              className="btn btn-outline btn-sm text-xs mt-6 opacity-50"
-              download
-              rel="noreferrer"
-            >
-              Download Resume
-            </a>
-          ))}
+        {resume?.fileUrl && (
+          <div className="mt-6">
+            {loading ? (
+              <div>{skeleton({ width: 'w-40', height: 'h-8' })}</div>
+            ) : (
+              <>
+                <a
+                  href={resume.fileUrl}
+                  target="_blank"
+                  className="btn btn-outline btn-sm text-xs mt-6 opacity-100 hover:badge-primary"
+                  download
+                  rel="noreferrer"
+                >
+                  Download Resume
+                </a>
+                <a
+                  href="https://qainsights.com"
+                  target="_blank"
+                  className="btn btn-outline btn-sm text-xs mt-6 opacity-100 hover:badge-primary ml-2"
+                  rel="follow noreferrer"
+                >
+                  Blog
+                </a>
+              </>
+            )}
+          </div>
+        )}
       </div>
     </div>
   );

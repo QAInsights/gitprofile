@@ -75,7 +75,7 @@ const config = {
       companyLink: 'https://infosys.com',
     },
   ],
-   certifications: [
+  certifications: [
     {
       name: 'Certified Ethical Hacker (CEH)',
       body: '',

@@ -26,7 +26,7 @@ const textEllipsis = (str, length = 100, ending = '...') => {
   }
 };
 
-const WPMediumPost = (post) => {
+const WPPost = (post) => {
   // console.log(post.title.trim());
   // console.log(post.description.trim());
   // console.log(post.thumbnail);
@@ -48,11 +48,9 @@ const WPMediumPost = (post) => {
 // define a function to get the articles from the wordpress feed
 const getWordPress = async ({ wpUrl }) => {
   let response = await axios.get(wpUrl);
-  console.log(wpUrl);
-  console.log(response.data.items.map((item) => WPMediumPost(item)));
-  return response.data.items.map((item) => WPMediumPost(item));
-
- 
+  // console.log(wpUrl);
+  // console.log(response.data.items.map((item) => WPMediumPost(item)));
+  return response.data.items.map((item) => WPPost(item));
 };
 
 const Blog = ({ loading, blog, googleAnalytics }) => {
