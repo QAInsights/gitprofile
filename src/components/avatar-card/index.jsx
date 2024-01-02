@@ -68,7 +68,7 @@ const AvatarCard = ({ profile, loading, avatarRing, resume }) => {
                   download
                   rel="noreferrer"
                 >
-                  Download Resume
+                  Resume
                 </a>
                 <a
                   href="https://qainsights.com"
