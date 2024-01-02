@@ -175,6 +175,7 @@ export const sanitizeConfig = (config) => {
       source: config?.blog?.source,
       username: config?.blog?.username,
       limit: config?.blog?.limit || 5,
+      feed: config?.blog?.feed,
     },
     googleAnalytics: {
       id: config?.googleAnalytics?.id,

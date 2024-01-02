@@ -141,6 +141,12 @@ export interface Blog {
    * Max is 10
    */
   limit?: number;
+
+  /**
+   * WP feed url
+   */
+  feed?: string;
+
 }
 
 export interface GoogleAnalytics {

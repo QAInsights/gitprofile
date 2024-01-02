@@ -156,6 +156,7 @@ const config = {
     source: 'wordpress', // medium | dev
     username: 'qainsights', // to hide blog section, keep it empty
     limit: 4, // How many posts to display. Max is 10.
+    feed: 'https://api.rss2json.com/v1/api.json?rss_url=https://qainsights.com/feed',
   },
   googleAnalytics: {
     id: '', // GA3 tracking id/GA4 tag id UA-XXXXXXXXX-X | G-XXXXXXXXXX

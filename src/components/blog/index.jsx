@@ -27,13 +27,6 @@ const textEllipsis = (str, length = 100, ending = '...') => {
 };
 
 const WPPost = (post) => {
-  // console.log(post.title.trim());
-  // console.log(post.description.trim());
-  // console.log(post.thumbnail);
-  // console.log(post.link);
-  // console.log(post.categories);
-  // console.log(new Date(post.pubDate));
-
   return {
     title: post.title.trim(),
     description: textEllipsis(removeHTMLTags(post.description.trim())),
@@ -48,8 +41,6 @@ const WPPost = (post) => {
 // define a function to get the articles from the wordpress feed
 const getWordPress = async ({ wpUrl }) => {
   let response = await axios.get(wpUrl);
-  // console.log(wpUrl);
-  // console.log(response.data.items.map((item) => WPMediumPost(item)));
   return response.data.items.map((item) => WPPost(item));
 };
 
@@ -68,14 +59,12 @@ const Blog = ({ loading, blog, googleAnalytics }) => {
         getDevPost({
           user: blog.username,
         }).then((res) => {
-          console.log(res);
           setArticles(res);
         });
       } else if (blog.source === 'wordpress') {
         setArticles(
           getWordPress({
-            wpUrl:
-              'https://api.rss2json.com/v1/api.json?rss_url=https://qainsights.com/feed',
+            wpUrl: blog.feed,
           }).then((res) => {
             setArticles(res);
           })
